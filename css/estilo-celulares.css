@@ -1,0 +1,29 @@
+#cel-area-cabecalho {
+  background: #b277ff;
+  padding: 15px;
+  text-align: center;
+}
+
+#cel #cel-area-cabecalho a:link,
+#cel #cel-area-cabecalho a:visited {
+  color: #fff;
+  padding: 8px 12px;
+}
+
+#cel #cel-area-cabecalho a:hover {
+  color: #6b00f7;
+  background: #fff;
+  text-decoration: none;
+}
+
+#cel a:link {
+  color: #6b00f7;
+}
+
+#cel a:visited {
+  color: #6b00f7;
+}
+
+#cel h2 {
+  color: #6b00f7;
+}
