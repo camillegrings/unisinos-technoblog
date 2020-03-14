@@ -1,0 +1,29 @@
+#eletronicos-area-cabecalho {
+  background: #c0392b;
+  padding: 15px;
+  text-align: center;
+}
+
+#eletronicos #eletronicos-area-cabecalho a:link,
+#eletronicos #eletronicos-area-cabecalho a:visited {
+  color: #fff;
+  padding: 8px 12px;
+}
+
+#eletronicos #eletronicos-area-cabecalho a:hover {
+  color: #c0392b;
+  background: #fff;
+  text-decoration: none;
+}
+
+#eletronicos a:link {
+  color: #c0392b;
+}
+
+#eletronicos a:visited {
+  color: #c0392b;
+}
+
+#eletronicos h2 {
+  color: #c0392b;
+}
