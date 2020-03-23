@@ -86,3 +86,52 @@ h3 {
 .caixa8 {
   background-image: url(imagens/imagem8.jpg);
 }
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  opacity: 1;
+  z-index: 1;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
+  float: right;
+  background-color: #f19f17;
+}
+
+.logo span {
+  padding: 14px 16px;
+  display: block;
+  color: white;
+  text-align: center;
+}
