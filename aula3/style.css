@@ -8,11 +8,23 @@ html {
   height: 100%;
 }
 
-.conteudo {
-  color: #777;
-  background-color: white;
-  text-align: justify;
-  padding: 50px 80px;
+.conteudo-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.conteudo-content span.title {
+  text-transform: uppercase;
+  color: #111;
+  padding: 10px 40px 10px 40px;
+  font-size: 24px;
+}
+
+.conteudo-content span.content {
+  padding-left: 40px;
+  padding-bottom: 10px;
 }
 
 .conteudo-titulo {
@@ -30,12 +42,6 @@ html {
   padding: 18px;
   font-size: 25px;
   letter-spacing: 5px;
-}
-
-h3 {
-  text-transform: uppercase;
-  color: #111;
-  text-align: center;
 }
 
 /* Efeito Parallax
