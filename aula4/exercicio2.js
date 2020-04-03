@@ -5,4 +5,4 @@ var nota2 = 8.0;
 
 var calculo = (nota1+nota2)/2;
 
-console.log('O aluno'+ nomeDoAluno +', matrícula '+numeroDaMatricula +', obteve a média final ' +calculo);
+console.log('O aluno '+ nomeDoAluno +', matrícula '+ numeroDaMatricula +', obteve a média final ' + calculo);
