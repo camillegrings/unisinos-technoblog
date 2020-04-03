@@ -1,9 +1,3 @@
-var celular ;
+var celular = 123456789 ;
 
-if(celular.length == 8){
-    console.log("Celular Válido")
-    return true;
-}else{
-    console.log("Celular inválido")
-    return false
-} 
+console.log(`Resultado do teste: ${ celular.length === 9 }`);
