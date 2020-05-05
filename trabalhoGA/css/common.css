@@ -5,6 +5,10 @@ body {
   font-family: "Noto Sans JP", sans-serif;
 }
 
+.content {
+  width: 100%;
+}
+
 a,
 a:hover,
 a:focus {
