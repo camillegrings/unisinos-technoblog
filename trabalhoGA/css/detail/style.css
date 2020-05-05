@@ -1,0 +1,25 @@
+h1#detail-title {
+  color: #18a2b8;
+  text-shadow: 2px 1px #e0e0e0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  align-self: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  box-shadow: 4px 2px 9px 0px #848383;
+}
+.course-details {
+  background-color: #f7f7f7;
+  padding: 30px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #ececec;
+  margin-bottom: 50px;
+}
