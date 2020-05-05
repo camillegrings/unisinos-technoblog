@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;900&display=swap");
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
 a,
 a:hover,
 a:focus {
@@ -5,6 +12,7 @@ a:focus {
   text-decoration: none;
   transition: all 0.3s;
 }
+
 .navbar {
   padding: 15px 10px;
   background: #fff;
@@ -14,10 +22,19 @@ a:focus {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-btn {
-  box-shadow: none;
-  outline: none !important;
-  border: none;
+.logo {
+  font-family: "Righteous", cursive;
+  color: #6d7fcc;
+  text-shadow: 2px 2px #e2e2e2;
+}
+
+#sidebar .logo {
+  color: white;
+  text-shadow: 2px 2px #353535;
+}
+
+.navbar button {
+  margin-left: 10px;
 }
 
 .line {
@@ -37,7 +54,6 @@ a:focus {
   background: #7386d5;
   color: #fff;
   transition: all 0.3s;
-  height: 100vh;
 }
 #sidebar.active {
   margin-left: -250px;
@@ -52,7 +68,7 @@ a:focus {
   border-bottom: 1px solid #47748b;
 }
 
-#sidebar ul p {
+#sidebar p {
   padding: 10px;
   font-size: 1.1em;
   display: block;
@@ -82,38 +98,4 @@ a[data-toggle="collapse"] {
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
-}
-
-ul ul a {
-  font-size: 0.9em !important;
-  padding-left: 30px !important;
-  background: #6d7fcc;
-}
-
-ul.CTAs {
-  padding: 20px;
-}
-
-ul.CTAs a {
-  text-align: center;
-  font-size: 0.9em !important;
-  display: block;
-  border-radius: 5px;
-  margin-bottom: 5px;
-}
-a.download {
-  background: #fff;
-  color: #7386d5;
-}
-a.article,
-a.article:hover {
-  background: #6d7fcc !important;
-  color: #fff !important;
-}
-
-#content {
-  width: 100%;
-  padding: 20px;
-  min-height: 100vh;
-  transition: all 0.3s;
 }
