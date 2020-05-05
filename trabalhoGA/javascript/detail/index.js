@@ -6,6 +6,7 @@ const getDetailInfo = () => {
   const course = courses.find((course) => course.id === courseId);
 
   const image = document.createElement("img");
+  image.className = "course-image";
   image.src = course.image;
   image.width = 700;
   image.height = 500;
