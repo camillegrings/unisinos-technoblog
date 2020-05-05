@@ -49,3 +49,20 @@ function initReadColor(){
   $('.btn-color').removeClass('active');
   $('#'+readColor).addClass('active');
 }
+
+
+function getReadColor() {
+  var readColor = localStorage.getItem('readcolor');
+  if(readColor === null) {
+    readColor = DEFAULT_READ_COLOR;
+  }
+  return readColor;
+}
+
+function getFontSize() {
+  var fontSize = localStorage.getItem('fontsize');
+  if(fontSize === null) {
+    fontSize = DEFAULT_FONT_SIZE;
+  }
+  return fontSize;
+}
