@@ -122,3 +122,8 @@ a[data-toggle="collapse"] {
 .font-size-18 {
   font-size: 18px;
 }
+
+h1.page-title {
+  color: #18a2b8;
+  text-shadow: 2px 1px #e0e0e0;
+}
