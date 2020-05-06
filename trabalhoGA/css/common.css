@@ -104,6 +104,10 @@ a[data-toggle="collapse"] {
   transform: translateY(-50%);
 }
 
+h1.page-title {
+  color: #18a2b8;
+  text-shadow: 2px 1px #e0e0e0;
+}
 .font-size-8 {
   font-size: 8px;
 }
