@@ -23,3 +23,11 @@ const carregavalores = () =>{
  document.getElementById('curso').value =localStorage.curso ;
  document.getElementById('email').value =localStorage.email ; 
 }
+
+const deletavalores = () =>{
+    localStorage.removeItem('nome');
+    localStorage.removeItem('idade');
+    localStorage.removeItem('escola');
+    localStorage.removeItem('curso');
+    localStorage.removeItem('email'); 
+   }
