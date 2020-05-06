@@ -2,19 +2,10 @@
     height: 100vh;
 }
 
-#ident1{
+.ident {
     padding-bottom: 15px;
-    
 }
-#ident2{
-    padding-bottom: 15px;
-    
-}
-#ident3{
-    padding-bottom: 15px;
-    
-}
-#ident4{
-    padding-bottom: 15px;
-    
+
+.title {
+    margin-left: 5px;
 }
