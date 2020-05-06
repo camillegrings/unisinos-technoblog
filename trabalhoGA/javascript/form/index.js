@@ -17,11 +17,11 @@ const guardavalores = () =>{
 }
 
 const carregavalores = () =>{
- document.getElementById('nome').value = localStorage.nome;
- document.getElementById('idade').value = localStorage.idade;
- document.getElementById('escola').value = localStorage.escola;
- document.getElementById('curso').value =localStorage.curso ;
- document.getElementById('email').value =localStorage.email ; 
+ document.getElementById('nome').value = localStorage.nome || '';
+ document.getElementById('idade').value = localStorage.idade || '';
+ document.getElementById('escola').value = localStorage.escola || '';
+ document.getElementById('curso').value =localStorage.curso || '';
+ document.getElementById('email').value =localStorage.email || ''; 
 }
 
 const deletavalores = () =>{
