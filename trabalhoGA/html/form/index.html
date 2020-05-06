@@ -7,15 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/form/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
     <title>Trabalho GA</title>
 </head>
 
-<body>
+<body onload = "carregavalores()">
     <div class="wrapper">
         <nav id="sidebar">
             <div class="sidebar-header">
@@ -96,33 +98,40 @@
 
             <!--inicio do form-->
            
-          <form class="container" action="post">
+          <form  class="container" >
          <div class="form-group">
 
+           <div id="ident1">
             <div class="row">
                 <div class="col">
                   <label for="Name">Nome</label>
-                  <input type="text" class="form-control" placeholder="nome">
+                  <input type="text" id="nome" class="form-control" placeholder="nome">
                 </div>
 
                 <div class="col">
                     <label for="Age">Idade</label>
-                  <input type="number" class="form-control" placeholder="idade">
+                  <input type="number" id="idade" class="form-control" placeholder="idade">
+                </div>     
                 </div>
               </div>
 
+              <div id="ident2">
               <label for="escola">Instituição de ensino</label>
               <input type="text" class="form-control" id="escola"  placeholder="instituição de ensino">
+            </div>
 
+            <div id="ident3">
               <label for="curso ">Curso</label>
-              <input type="text" class="form-control" id="curso " placeholder="Seu curso">
+              <input type="text" id="curso" class="form-control" placeholder="Curso">
+            </div>
 
+            <div id="ident4">
               <label for="email">E-mail</label>
               <input type="email" class="form-control" id="email" placeholder="E-mail">
-             
+             </div>
                 </div>                    
           
-          <button type="submit" class="btn btn-outline-primary">Submit</button> <button type="button" class="btn btn-outline-dark">Limpar</button>
+          <button type="button" onclick="guardavalores()" id="submit" class="btn btn-outline-primary" >Guardar</button> <input type="reset" id="limpar" class="btn btn-outline-dark" value="Limpar">
           
          </form>
           <br>
@@ -138,7 +147,7 @@
 
 
 
-    <script src="./index.js"></script>
+    <script src="../../javascript/form/index.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
