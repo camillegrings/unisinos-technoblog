@@ -46,3 +46,21 @@ img.course-image {
 .teachers p {
   padding: 0;
 }
+
+.form-group {
+  background: #ececec;
+  padding: 10px;
+}
+
+.size-options {
+  display: flex;
+}
+
+.radio {
+  margin-right: 20px;
+}
+
+.goback {
+  max-width: 150px;
+  margin-bottom: 30px;
+}
