@@ -51,29 +51,40 @@
                 <!-- Preferences -->
                 <form id="preferences-form">
                     <div class="form-group">
-                        <label for="fontSize">Tamanho do texto</label>
-                        <div class="size-options">
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" class="fontSizeRadio" name="fontSizeRadio" id="fontSizeRadio10"
-                                        value="10">
-                                    <span class="font-size-10">Pequeno</span>
-                                </label>
+                        <div>
+                            <label for="fontSize">Tamanho do texto</label>
+                            <div class="size-options">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" class="fontSizeRadio" name="fontSizeRadio"
+                                            id="fontSizeRadio10" value="10">
+                                        <span class="font-size-10">Pequeno</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" class="fontSizeRadio" name="fontSizeRadio"
+                                            id="fontSizeRadio14" value="14">
+                                        <span class="font-size-14">Médio</span>
+                                    </label>
+                                </div>
+                                <div class="radio disabled">
+                                    <label>
+                                        <input type="radio" class="fontSizeRadio" name="fontSizeRadio"
+                                            id="fontSizeRadio18" value="18">
+                                        <span class="font-size-18">Grande</span>
+                                    </label>
+                                </div>
                             </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" class="fontSizeRadio" name="fontSizeRadio" id="fontSizeRadio14"
-                                        value="14">
-                                    <span class="font-size-14">Médio</span>
-                                </label>
-                            </div>
-                            <div class="radio disabled">
-                                <label>
-                                    <input type="radio" class="fontSizeRadio" name="fontSizeRadio" id="fontSizeRadio18"
-                                        value="18">
-                                    <span class="font-size-18">Grande</span>
-                                </label>
-                            </div>
+                        </div>
+                        <div>
+                            <label for="readColor">Cor para leitura</label>
+                            <button type="button" class="btn btn-sm btn-primary btn-color" id="007bff">Azul</button>
+                            <button type="button" class="btn btn-sm btn-success btn-color" id="28a745">Verde</button>
+                            <button type="button" class="btn btn-sm btn-info btn-color" id="17a2b8">Azul Claro</button>
+                            <button type="button" class="btn btn-sm btn-warning btn-color" id="ffc107">Amarelo</button>
+                            <button type="button" class="btn btn-sm btn-danger btn-color" id="dc3545">Vermelho</button>
+                            <button type="button" class="btn btn-sm btn-dark btn-color" id="000000">Preto</button>
                         </div>
 
                     </div>
@@ -125,8 +136,8 @@
         crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="../../assets/courses.js"></script>
-    <script src="../../javascript/detail/index.js"></script>
     <script src="../../javascript/preferences/index.js"></script>
+    <script src="../../javascript/detail/index.js"></script>
 
     <script>
         $(document).ready(function () {

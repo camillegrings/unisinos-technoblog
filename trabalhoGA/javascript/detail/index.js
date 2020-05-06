@@ -9,21 +9,17 @@ $(document).ready(function () {
     changeFontSize(size);
   });
 
-  setFontSize();
+  $(".btn-color").on("click", function (val) {
+    var color = this.id;
+    changeFontColor(color);
+  });
+
+  const size = getFontSize();
+  changeFontSize(size);
+
+  const color = getReadColor();
+  changeFontColor(color);
 });
-
-function setFontSize() {
-  var fontSize = localStorage.getItem("fontsize");
-  if (fontSize === null) {
-    fontSize = DEFAULT_FONT_SIZE;
-  }
-  var $radios = $("input:radio[name=fontSizeRadio]");
-  if ($radios.is(":checked") === false) {
-    $radios.filter("[value=" + fontSize.toString() + "]").prop("checked", true);
-  }
-
-  changeFontSize(fontSize);
-}
 
 function changeFontSize(size) {
   localStorage.setItem("fontsize", size);
@@ -32,6 +28,16 @@ function changeFontSize(size) {
   document.getElementById("teacher-name2").className = `font-size-${size}`;
   document.getElementById("teacher-desc1").className = `font-size-${size}`;
   document.getElementById("teacher-desc2").className = `font-size-${size}`;
+}
+
+function changeFontColor(color) {
+  console.log(color);
+  localStorage.setItem("readcolor", color);
+  document.getElementById("detail-description").style.color = `#${color}`;
+  document.getElementById("teacher-name1").style.color = `#${color}`;
+  document.getElementById("teacher-name2").style.color = `#${color}`;
+  document.getElementById("teacher-desc1").style.color = `#${color}`;
+  document.getElementById("teacher-desc2").style.color = `#${color}`;
 }
 
 function getDetailInfo() {
