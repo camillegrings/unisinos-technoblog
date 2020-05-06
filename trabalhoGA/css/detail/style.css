@@ -59,3 +59,8 @@ img.course-image {
 .radio {
   margin-right: 20px;
 }
+
+.goback {
+  max-width: 150px;
+  margin-bottom: 30px;
+}
