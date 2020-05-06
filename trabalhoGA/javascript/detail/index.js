@@ -31,7 +31,6 @@ function changeFontSize(size) {
 }
 
 function changeFontColor(color) {
-  console.log(color);
   localStorage.setItem("readcolor", color);
   document.getElementById("detail-description").style.color = `#${color}`;
   document.getElementById("teacher-name1").style.color = `#${color}`;

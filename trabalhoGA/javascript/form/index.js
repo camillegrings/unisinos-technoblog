@@ -14,9 +14,10 @@ const guardavalores = () =>{
     localStorage.escola = vescola;
     localStorage.curso = vcurso;
     localStorage.email = vemail;
+    localStorage.setItem('hasFilledForm', true)
 }
 
-const carregavalores = () =>{
+const carregavalores = () => {
  document.getElementById('nome').value = localStorage.nome || '';
  document.getElementById('idade').value = localStorage.idade || '';
  document.getElementById('escola').value = localStorage.escola || '';
