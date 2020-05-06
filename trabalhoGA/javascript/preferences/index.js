@@ -15,11 +15,25 @@ $(document).ready(function () {
     $('#'+color).addClass('active');
   });
 
+  $('#reset-to-defaults').on('click', function() {
+    resetToDefaults();
+  });
+
   initFontSize();
   initReadColor();
 
  });
 
+
+function setFontSize(fontSize) {
+  var $radios = $('input:radio[name=fontSizeRadio]');
+  $radios.filter('[value='+fontSize.toString()+']').prop('checked', true);
+}
+
+function setReadColor(readColor) {
+  $('.btn-color').removeClass('active');
+  $('#'+readColor).addClass('active');
+}
 
 function saveReadColor(id){
   var color = DEFAULT_READ_COLOR;
@@ -35,10 +49,7 @@ function initFontSize(){
   if(fontSize === null) {
     fontSize = DEFAULT_FONT_SIZE;
   }
-  var $radios = $('input:radio[name=fontSizeRadio]');
-  if($radios.is(':checked') === false) {
-    $radios.filter('[value='+fontSize.toString()+']').prop('checked', true);
-  }
+  setFontSize(fontSize);
 }
 
 function initReadColor(){
@@ -46,10 +57,8 @@ function initReadColor(){
   if(readColor === null) {
     readColor = DEFAULT_READ_COLOR;
   }
-  $('.btn-color').removeClass('active');
-  $('#'+readColor).addClass('active');
+  setReadColor(readColor);
 }
-
 
 function getReadColor() {
   var readColor = localStorage.getItem('readcolor');
@@ -65,4 +74,11 @@ function getFontSize() {
     fontSize = DEFAULT_FONT_SIZE;
   }
   return fontSize;
+}
+
+function resetToDefaults() {
+  setFontSize(DEFAULT_FONT_SIZE);
+  saveFontSize(DEFAULT_FONT_SIZE);
+  setReadColor(DEFAULT_READ_COLOR);
+  saveReadColor(DEFAULT_READ_COLOR);
 }
