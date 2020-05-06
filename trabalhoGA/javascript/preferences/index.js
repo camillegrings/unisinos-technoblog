@@ -1,5 +1,5 @@
 var DEFAULT_FONT_SIZE = 14;
-var DEFAULT_READ_COLOR = "17a2b8";
+var DEFAULT_READ_COLOR = "000000";
 
 $(document).ready(function () {
   $(".fontSizeRadio").on("change", function () {
