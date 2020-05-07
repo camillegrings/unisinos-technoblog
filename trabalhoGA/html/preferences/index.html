@@ -51,55 +51,73 @@
               <h1 class="page-title">Preferências</h1>
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-xs-12 col-md-8">
-                    <form id="preferences-form">
-                      <div class="form-group">
-                        <button type="button" class="btn btn-sm btn-light" id="reset-to-defaults">Usar o padrão</button>
-                      </div>
-
-                      <div class="form-group">
-                        <label for="fontSize">Tamanho do texto</label>
-                        <div class="radio"  >
-                          <label>
-                            <input type="radio" class="fontSizeRadio" name="fontSizeRadio" id="fontSizeRadio10" value="10">
-                            <span class="font-size-10">Pequeno</span>
-                          </label>
-                        </div>
-                        <div class="radio">
-                          <label>
-                            <input type="radio" class="fontSizeRadio" name="fontSizeRadio" id="fontSizeRadio14" value="14">
-                            <span class="font-size-14">Médio</span>
-                          </label>
-                        </div>
-                        <div class="radio disabled">
-                          <label>
-                            <input type="radio" class="fontSizeRadio" name="fontSizeRadio" id="fontSizeRadio18" value="18">
-                            <span class="font-size-18">Grande</span>
-                          </label>
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label for="readColor">Cor para leitura</label>
-                        <div>
-                          <button type="button" class="btn btn-sm btn-primary btn-color" id="007bff">Azul</button>
-                          <button type="button" class="btn btn-sm btn-success btn-color" id="28a745">Verde</button>
-                          <button type="button" class="btn btn-sm btn-info btn-color" id="17a2b8">Azul Claro</button>
-                          <button type="button" class="btn btn-sm btn-warning btn-color" id="ffc107">Amarelo</button>
-                          <button type="button" class="btn btn-sm btn-danger btn-color" id="dc3545">Vermelho</button>
-                          <button type="button" class="btn btn-sm btn-dark btn-color" id="000000">Preto</button>
-                        </div>
-                      </div>
+                  <div class="col-xs-12 col-md-12">
                       
-                      <div class="form-group">
-                        <label for="displayCourses">Modo de visualização dos cursos</label>
-                        <div>
-                          <button type="button" class="btn btn-default btn-sm btn-display-courses" id="list">Lista</button>
-                          <button type="button" class="btn btn-default btn-sm btn-display-courses" id="card">Cartões</button>
+                      <div class="row mb-1">
+                        <div class="col-md-12">
+                          <button type="button" class="btn btn-sm btn-light" id="reset-to-defaults">Usar o padrões  </button>
                         </div>
                       </div>
 
-                    </form>
+                      <div class="row mb-1">
+                        <div class="col-md-6">
+                          <div class="card">
+                            <div class="card-header">
+                              Tamanho do texto
+                            </div>
+                            <div class="card-body">
+                              <div class="radio"  >
+                                <label>
+                                  <input type="radio" class="fontSizeRadio" name="fontSizeRadio" id="fontSizeRadio10" value="10">
+                                  <span class="font-size-10">Pequeno</span>
+                                </label>
+                              </div>
+                              <div class="radio">
+                                <label>
+                                  <input type="radio" class="fontSizeRadio" name="fontSizeRadio" id="fontSizeRadio14" value="14">
+                                  <span class="font-size-14">Médio</span>
+                                </label>
+                              </div>
+                              <div class="radio disabled">
+                                <label>
+                                  <input type="radio" class="fontSizeRadio" name="fontSizeRadio" id="fontSizeRadio18" value="18">
+                                  <span class="font-size-18">Grande</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="card">
+                            <div class="card-header">
+                              Modo de visualização dos cursos
+                            </div>
+                            <div class="card-body">
+                              <button type="button" class="btn btn-default btn-sm btn-display-courses" id="list">Lista</button>
+                              <button type="button" class="btn btn-default btn-sm btn-display-courses" id="card">Cartões</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row mb-1">
+                        <div class="col-md-12">
+                          <div class="card">
+                            <div class="card-header">
+                              Cor para leitura
+                            </div>
+                            <div class="card-body">
+                              <button type="button" class="btn btn-sm btn-primary btn-color" id="007bff">Azul</button>
+                              <button type="button" class="btn btn-sm btn-success btn-color" id="28a745">Verde</button>
+                              <button type="button" class="btn btn-sm btn-info btn-color" id="17a2b8">Azul Claro</button>
+                              <button type="button" class="btn btn-sm btn-warning btn-color" id="ffc107">Amarelo</button>
+                              <button type="button" class="btn btn-sm btn-danger btn-color" id="dc3545">Vermelho</button>
+                              <button type="button" class="btn btn-sm btn-dark btn-color" id="000000">Preto</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
                   </div>
                 </div>
               </div>
@@ -118,8 +136,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+        
     <script src="../../javascript/preferences/index.js">
-    </script> <script src="../../javascript/common.js"></script>
+    </script> 
+    <script src="../../javascript/common.js"></script>
 
     <script>
         $(document).ready(function () {
