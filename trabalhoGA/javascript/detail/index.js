@@ -40,7 +40,7 @@ function changeFontColor(color) {
 function getDetailInfo() {
   let courseId = localStorage.getItem("courseId");
 
-  if (!courseId) courseId = 1;
+  if (!courseId) courseId = "1";
   const course = courses.find((c) => c.id.toString() === courseId);
 
   const image = document.createElement("img");
