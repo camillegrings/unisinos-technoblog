@@ -78,7 +78,6 @@ const renderCourses = (sorted = false) => {
     el.insertAdjacentHTML('beforeend',
     coursesToMap.map(curso =>
         `
-        <div class="row">
           <div class="col-sm-12 mt-2">
             <div class="card">
               <img src="${curso.imagem}" class="card-img-top" width="50" height="150">
@@ -89,7 +88,6 @@ const renderCourses = (sorted = false) => {
               </div>
             </div>
           </div>
-        </div>
       `
       ).join('\n')
     )
