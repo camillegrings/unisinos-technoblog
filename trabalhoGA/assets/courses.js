@@ -1,2 +1,34 @@
-const data =
-  '[{"id": 1,"name": "Desenvolvimento WEB","description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.","image": "https://images.freeimages.com/images/large-previews/0ea/tropical-fiji-island-1-1408393.jpg"}]';
+const courses = [
+  {
+    id:1,
+    nome: "Curso de PHP",
+    imagem: "../../assets/images/php-logo.png",
+    descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut pellentesque diam, nec feugiat ligula. Mauris eget massa sollicitudin, vulputate quam in, imperdiet urna. Phasellus ullamcorper turpis ut mauris lobortis, id iaculis lectus vestibulum. Curabitur eros enim, placerat quis nisl sed, laoreet volutpat ante.",
+    professor1: "Carlos",
+    professor2: "João"
+  },
+  {
+    id:2,
+    nome: "Curso de Javascript",
+    imagem: "../../assets/images/js.png",
+    descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut pellentesque diam, nec feugiat ligula. Mauris eget massa sollicitudin, vulputate quam in, imperdiet urna. Phasellus ullamcorper turpis ut mauris lobortis, id iaculis lectus vestibulum. Curabitur eros enim, placerat quis nisl sed, laoreet volutpat ante.",
+    professor1: "Maria",
+    professor2: "João"
+  },
+  {
+    id:3,
+    nome: "Curso de Go",
+    imagem: "../../assets/images/golang.jpeg",
+    descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut pellentesque diam, nec feugiat ligula. Mauris eget massa sollicitudin, vulputate quam in, imperdiet urna. Phasellus ullamcorper turpis ut mauris lobortis, id iaculis lectus vestibulum. Curabitur eros enim, placerat quis nisl sed, laoreet volutpat ante.",
+    professor1: "Fernando",
+    professor2: "Marcos"
+  },
+  {
+    id:4,
+    nome: "Banco de Dados",
+    imagem: "../../assets/images/banco-dados-img.png",
+    descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut pellentesque diam, nec feugiat ligula. Mauris eget massa sollicitudin, vulputate quam in, imperdiet urna. Phasellus ullamcorper turpis ut mauris lobortis, id iaculis lectus vestibulum. Curabitur eros enim, placerat quis nisl sed, laoreet volutpat ante.",
+    professor1: "Carla",
+    professor2: "Jorge"
+  },
+]
