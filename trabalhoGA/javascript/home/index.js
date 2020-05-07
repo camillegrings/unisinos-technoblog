@@ -1,33 +1,99 @@
-const minFontSize = 1;
-const maxFontSize = 3;
+const courses = [
+  {
+    nome: "Curso de PHP",
+    imagem: "../../assets/images/php-logo.png",
+    link: "../detail/index.html",
+    descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut pellentesque diam, nec feugiat ligula. Mauris eget massa sollicitudin, vulputate quam in, imperdiet urna. Phasellus ullamcorper turpis ut mauris lobortis, id iaculis lectus vestibulum. Curabitur eros enim, placerat quis nisl sed, laoreet volutpat ante."
+  },
+  {
+    nome: "Curso de Javascript",
+    imagem: "../../assets/images/js.png",
+    link: "../detail/index.html",
+    descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut pellentesque diam, nec feugiat ligula. Mauris eget massa sollicitudin, vulputate quam in, imperdiet urna. Phasellus ullamcorper turpis ut mauris lobortis, id iaculis lectus vestibulum. Curabitur eros enim, placerat quis nisl sed, laoreet volutpat ante."
+  },
+  {
+    nome: "Curso de Go",
+    imagem: "../../assets/images/golang.jpeg",
+    link: "../detail/index.html",
+    descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut pellentesque diam, nec feugiat ligula. Mauris eget massa sollicitudin, vulputate quam in, imperdiet urna. Phasellus ullamcorper turpis ut mauris lobortis, id iaculis lectus vestibulum. Curabitur eros enim, placerat quis nisl sed, laoreet volutpat ante."
+  },
+  {
+    nome: "Banco de Dados",
+    imagem: "../../assets/images/banco-dados-img.png",
+    link: "../detail/index.html",
+    descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut pellentesque diam, nec feugiat ligula. Mauris eget massa sollicitudin, vulputate quam in, imperdiet urna. Phasellus ullamcorper turpis ut mauris lobortis, id iaculis lectus vestibulum. Curabitur eros enim, placerat quis nisl sed, laoreet volutpat ante."
+  },
+]
 
-let currentFontSize = localStorage.getItem('currentFontSize') || 1;
+const toggleCoursesView = () => {
+  let currentDisplayCourses = localStorage.getItem("displayCourses") || "card";
+  const el = document.getElementById("cursos");
 
-
-if (currentFontSize == minFontSize) document.getElementById('diminuiFonte').disabled = true;
-if (currentFontSize >= maxFontSize) document.getElementById('aumentaFonte').disabled = true;
-
-const ajustaTextos = () => {
-  document.querySelectorAll('p[class|="texto"]').forEach(el => {
-    el.classList.remove(el.classList.item(0));
-    el.classList.add(`texto-${currentFontSize}`);
-  })
+  localStorage.setItem("displayCourses", currentDisplayCourses === "card" ? "list" : "card");
+  renderCourses();
 }
 
-const diminuiFonte = () => {
-  localStorage.setItem('currentFontSize', --currentFontSize);
-  document.getElementById('aumentaFonte').disabled = false;
-  ajustaTextos();
+const sortCourseName = (a, b) => {
+  if (a.nome.toLowerCase() < b.nome.toLowerCase()) return -1;
+  if (a.nome.toLowerCase() > b.nome.toLowerCase()) return 1;
+  return 0;
+};
 
-  if (currentFontSize === minFontSize) document.getElementById('diminuiFonte').disabled = true;
+const sortCourses = () => {
+  renderCourses(true);
 }
 
-const aumentaFonte = () => {
-  localStorage.setItem('currentFontSize', ++currentFontSize);
-  document.getElementById('diminuiFonte').disabled = false;
-  ajustaTextos();
+const renderCourses = (sorted = false) => {
+  let currentDisplayCourses = localStorage.getItem("displayCourses") || "card";
 
-  if (currentFontSize >= maxFontSize) document.getElementById('aumentaFonte').disabled = true;
+  const el = document.getElementById("cursos");
+  el.innerHTML = "";
+
+  let coursesToMap = sorted ? courses.sort(sortCourseName) : courses;
+
+  if (currentDisplayCourses === "card") {
+    document.getElementById("toggle-display").classList.remove("fa-th-large");
+    document.getElementById("toggle-display").classList.add("fa-list");
+
+    el.insertAdjacentHTML('beforeend',
+      coursesToMap.map(curso =>
+        `
+        <div class="col-sm-12 col-md-4 mt-2">
+          <div class="card">
+            <img src="${curso.imagem}" class="card-img-top" width="100" height="100">
+            <div class="card-body">
+              <h5 class="card-title">${curso.nome}</h5>
+              <p class="card-text">${curso.descricao}</p>
+              <a href="${curso.link}" class="btn btn-primary">Ver curso</a>
+            </div>
+          </div>
+        </div>
+      `
+      ).join('\n')
+    )
+  } else {
+    document.getElementById("toggle-display").classList.add("fa-th-large");
+    document.getElementById("toggle-display").classList.remove("fa-list");
+
+    el.insertAdjacentHTML('beforeend',
+    coursesToMap.map(curso =>
+        `
+        <div class="row">
+          <div class="col-sm-12 mt-2">
+            <div class="card">
+              <img src="${curso.imagem}" class="card-img-top" width="50" height="150">
+              <div class="card-body">
+                <h5 class="card-title">${curso.nome}</h5>
+                <p class="card-text">${curso.descricao}</p>
+                <a href="${curso.link}" class="btn btn-primary">Ver curso</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `
+      ).join('\n')
+    )
+  }
 }
 
-ajustaTextos();
+renderCourses();
