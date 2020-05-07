@@ -1,30 +1,3 @@
-const courses = [
-  {
-    nome: "Curso de PHP",
-    imagem: "../../assets/images/php-logo.png",
-    link: "../detail/index.html",
-    descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut pellentesque diam, nec feugiat ligula. Mauris eget massa sollicitudin, vulputate quam in, imperdiet urna. Phasellus ullamcorper turpis ut mauris lobortis, id iaculis lectus vestibulum. Curabitur eros enim, placerat quis nisl sed, laoreet volutpat ante."
-  },
-  {
-    nome: "Curso de Javascript",
-    imagem: "../../assets/images/js.png",
-    link: "../detail/index.html",
-    descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut pellentesque diam, nec feugiat ligula. Mauris eget massa sollicitudin, vulputate quam in, imperdiet urna. Phasellus ullamcorper turpis ut mauris lobortis, id iaculis lectus vestibulum. Curabitur eros enim, placerat quis nisl sed, laoreet volutpat ante."
-  },
-  {
-    nome: "Curso de Go",
-    imagem: "../../assets/images/golang.jpeg",
-    link: "../detail/index.html",
-    descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut pellentesque diam, nec feugiat ligula. Mauris eget massa sollicitudin, vulputate quam in, imperdiet urna. Phasellus ullamcorper turpis ut mauris lobortis, id iaculis lectus vestibulum. Curabitur eros enim, placerat quis nisl sed, laoreet volutpat ante."
-  },
-  {
-    nome: "Banco de Dados",
-    imagem: "../../assets/images/banco-dados-img.png",
-    link: "../detail/index.html",
-    descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut pellentesque diam, nec feugiat ligula. Mauris eget massa sollicitudin, vulputate quam in, imperdiet urna. Phasellus ullamcorper turpis ut mauris lobortis, id iaculis lectus vestibulum. Curabitur eros enim, placerat quis nisl sed, laoreet volutpat ante."
-  },
-]
-
 const toggleCoursesView = () => {
   let currentDisplayCourses = localStorage.getItem("displayCourses") || "card";
   const el = document.getElementById("cursos");
@@ -64,7 +37,7 @@ const renderCourses = (sorted = false) => {
             <div class="card-body">
               <h5 class="card-title">${curso.nome}</h5>
               <p class="card-text">${curso.descricao}</p>
-              <a href="${curso.link}" class="btn btn-primary">Ver curso</a>
+              <button onclick={goToCourseDetail(${curso.id})} class="btn btn-primary">Ver curso</a>
             </div>
           </div>
         </div>
@@ -76,22 +49,27 @@ const renderCourses = (sorted = false) => {
     document.getElementById("toggle-display").classList.remove("fa-list");
 
     el.insertAdjacentHTML('beforeend',
-    coursesToMap.map(curso =>
-        `
-          <div class="col-sm-12 mt-2">
-            <div class="card">
-              <img src="${curso.imagem}" class="card-img-top" width="50" height="150">
-              <div class="card-body">
-                <h5 class="card-title">${curso.nome}</h5>
-                <p class="card-text">${curso.descricao}</p>
-                <a href="${curso.link}" class="btn btn-primary">Ver curso</a>
-              </div>
-            </div>
-          </div>
+    coursesToMap.map(curso => 
       `
+      <div class="col-sm-12 mt-2">
+        <div class="card">
+          <img src="${curso.imagem}" class="card-img-top" width="50" height="150">
+          <div class="card-body">
+            <h5 class="card-title">${curso.nome}</h5>
+            <p class="card-text">${curso.descricao}</p>
+            <button onclick={goToCourseDetail(${curso.id})} class="btn btn-primary">Ver curso</a>
+          </div>
+        </div>
+      </div>
+    `
       ).join('\n')
     )
   }
+}
+
+const goToCourseDetail = (id) => {
+  localStorage.setItem("courseId", id);
+  window.location = '../detail/index.html'
 }
 
 renderCourses();

@@ -1,5 +1,3 @@
-var DEFAULT_FONT_SIZE = 14;
-
 $(document).ready(function () {
   $(".fontSizeRadio").on("change", function () {
     var size = $(
@@ -40,22 +38,23 @@ function changeFontColor(color) {
 }
 
 function getDetailInfo() {
-  const courses = JSON.parse(data);
   let courseId = localStorage.getItem("courseId");
 
-  if (!courseId) courseId = 1;
-  const course = courses.find((course) => course.id === courseId);
+  if (!courseId) courseId = "1";
+  const course = courses.find((c) => c.id.toString() === courseId);
 
   const image = document.createElement("img");
   image.className = "course-image";
-  image.src = course.image;
+  image.src = course.imagem;
   image.width = 700;
   image.height = 500;
 
   const title = document.getElementById("detail-title");
-  title.innerHTML = course.name;
+  title.innerHTML = course.nome;
   title.insertAdjacentElement("afterend", image);
-  document.getElementById("detail-description").innerHTML = course.description;
+  document.getElementById("detail-description").innerHTML = course.descricao;
+  document.getElementById("teacher-name1").innerHTML =course.professor1
+  document.getElementById("teacher-name2").innerHTML =course.professor2
 }
 
 getDetailInfo();
