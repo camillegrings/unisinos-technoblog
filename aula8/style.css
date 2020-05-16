@@ -1,0 +1,37 @@
+.checked {
+  text-decoration: line-through;
+}
+
+li {
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  min-width: 500px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: aliceblue;
+  padding-bottom: 30px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  display: flex;
+  background-color: whitesmoke;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  justify-content: space-between;
+}
