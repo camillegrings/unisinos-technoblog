@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  min-width: 500px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: aliceblue;
+  padding-bottom: 30px;
+}
+
+.img {
+  margin: 40px;
+  /* opacity: 0.5; */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#animateBtn {
+  padding: 10px;
+}
+
+.red {
+ background-color: red;
+}
