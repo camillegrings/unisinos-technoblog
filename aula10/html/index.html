@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <title>Trabalho GA</title>
+</head>
+
+<body onload="carregavalores()">
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3 class="logo">e-Learn</h3>
+            </div>
+            <p>Sua plataforma online de cursos</p>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="../home/index.html">Cursos</a>
+                </li>
+                <li class="active">
+                    <a href="../form/index.html">Perfil</a>
+                </li>
+                <li>
+                    <a href="../preferences/index.html">Preferências</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <!-- Header -->
+            <nav class="navbar navbar-light bg-light">
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fa fa-align-justify"></i>
+                </button>
+                <h3 class="logo">e-Learn</h3>
+            </nav>
+
+            <!-- Page content -->
+
+            <form class="container">
+                <div class="form-group">
+                    <div class="row ident title">
+                        <h4>Preencha seus dados pessoais:</h4>
+                    </div>
+                    <div class="ident">
+                        <div class="row">
+                            <div class="col">
+                                <label for="Name">Nome</label>
+                                <input type="text" id="nome" class="form-control" placeholder="nome">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ident">
+                        <label for="Endereco">Endereço</label>
+                        <input type="text" class="form-control" id="endereco" placeholder="Endereço">
+                    </div>
+
+                    <div class="ident">
+                        <label for="telefone ">Telefone</label>
+                        <input type="phone" id="telefone" class="form-control" placeholder="Telefone ">
+                    </div>
+
+                    <div class="ident">
+                        <label for="email">E-mail</label>
+                        <input type="email" class="form-control" id="email" placeholder="E-mail">
+                    </div>
+                </div>
+
+                <button type="button" onclick="guardavalores()" id="submit"
+                    class="btn btn-outline-primary">Guardar</button> <input type="reset" onclick="deletavalores()"
+                    id="remove" class="btn btn-outline-danger" value="Delete"> <input type="reset" id="limpar"
+                    class="btn btn-outline-dark" value="Limpar">
+
+            </form>
+            <br>
+            <!--fim do form -->
+            <div class="line"></div>
+        </div>
+
+
+    </div>
+
+
+
+
+    <script src="../../javascript/index.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });  
+    </script>
+</body>
+
+</html>
