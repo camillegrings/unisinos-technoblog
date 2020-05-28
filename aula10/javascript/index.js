@@ -3,10 +3,11 @@ var vnome,vendereco,vtelefone,vemail,User_json;
 
 const guardavalores = () =>{
     vnome = document.getElementById('nome').value;
-    venderoco = document.getElementById('endereco').value;
+    vendereco = document.getElementById('endereco').value;
     vtelefone = document.getElementById('telefone').value;
     vemail = document.getElementById('email').value;
-    user_json = JSON.stringify("Nome: " + vnome +" Endereço: " + vendereco +" Telefone: " + vtelefone +" Email: " +vemail);
+
+    user_json = JSON.stringify("Nome: " + vnome +" Endereco: " + vendereco +" Telefone: " + vtelefone +" Email: " +vemail);
 
     localStorage.json = user_json;
     console.log(user_json);
@@ -15,8 +16,7 @@ const guardavalores = () =>{
 }
 
 const carregavalores = () => {
-    var user = json.parse(localStorage.User_json)
-
+ document.write(user_json).innerhtml;
 
 
 
