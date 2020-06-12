@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <script src="jquery-3.5.1.min.js"></script>
+
+
+    <meta charset="UTF-8">
+    <title>Exercícios AJAX</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+
+<body>
+
+    <div class="page-container">
+        <header>
+            <div class="course-title">
+                <h1>Exercícios AJAX</h1>
+                <h2>Aula 12</h2>
+            </div>
+        </header>
+
+        <main>
+            <h3>Exercício 1</h3>
+            <p> 1) Faça o pedido ajax ao open weather map e apresente abaixo a temperatura atual, a máxima e a mínima de
+                Londres:</h5>
+            <p>Temperatura atual: <span id="temp_atual"></span></p>
+            <p>Temperatura máxima: <span id="temp_max"></span></p>
+            <p>Temperatura mínima: <span id="temp_min"></span></p>
+
+            <h3>Exercício 2</h3>
+
+            <p>
+                2) Popule o select box abaixo com a lista de países do mundo. A tarefa deve ser realizada em duas
+                partes:
+
+                <li> Uma função para pegar os países via AJAX, do seguinte endereço https://restcountries.eu/rest/v2/all
+                </li>
+                <li> Uma função para montar os elementos &lt;option&gt; com os nomes dos países, que deve ser chamada
+                    como
+                    callback da função acima.
+                </li>
+            </p>
+
+            <select id="paises">
+                <option selected value="Selecione">Selecione o país</option>
+
+            </select>
+
+            <br><br>
+
+            <h3>Exercício 3</h3>
+            3) Trabalhe com o API Open Trivia para gerar uma pergunta sobre filmes.
+            Endereço do API: <a href="https://opentdb.com/api_config.php">https://opentdb.com/api_config.php</a>
+            <br><br>
+
+            Esta pergunta deve ser colocada abaixo, com as opções de resposta em radio buttons. Deve haver também um
+            botão "Enviar Reposta", que informará ao usuário se a resposta está certa ou errada. O botão só deve
+            aparecer se
+            alguma resposta estiver marcada.
+
+
+            <br><br>
+
+            <h3 id="pergunta"></h3>
+
+            <form id="opcoes">
+
+
+            </form>
+
+            <p id="erro_acerto"></p>
+
+            <button id="submeter" style="display:none"> Enviar Resposta</button>
+            <button id="nova_pergunta" style="display:none"> Gerar nova pergunta</button>
+
+            <h3>Pontuação Total:
+                <span id="score"></span>
+            </h3>
+        </main>
+
+    </div>
+
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>
