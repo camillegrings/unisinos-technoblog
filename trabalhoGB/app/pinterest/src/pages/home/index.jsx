@@ -1,11 +1,13 @@
 import React from "react";
 // import "./App.css";
 
+import { Header } from "../../components";
+
 function Home() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Home</p>
+        <Header />
       </header>
     </div>
   );
