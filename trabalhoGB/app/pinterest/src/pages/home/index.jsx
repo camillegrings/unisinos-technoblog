@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "./style.css";
 
 import { Header } from "../../components";
@@ -16,9 +18,21 @@ const images = [
 ];
 
 function Home() {
+  function renderRegisterButton() {
+    return (
+      <Link to="/cadastro" className="registerButton">
+        <i className="registerIcon">+</i>
+      </Link>
+    );
+  }
+
   function renderImages() {
     return images.map((image) => {
-      return <img src={image} class="image" />;
+      return (
+        <Link to="/detail" className="imageLink">
+          <img src={image} className="image" />
+        </Link>
+      );
     });
   }
 
@@ -27,6 +41,7 @@ function Home() {
       <header className="App-header">
         <Header />
       </header>
+      {renderRegisterButton()}
       <div className="container">{renderImages()}</div>
     </div>
   );
