@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import arrowBottom from "../../assets/bottom.png";
+
 import "./style.css";
 
 import { Header, RegisterButton } from "../../components";
@@ -21,18 +23,34 @@ function Home() {
   function renderImages() {
     return images.map((image) => {
       return (
-        <Link to="/detalhe" className="imageLink">
-          <img src={image} className="image" />
+        <Link to="/detalhe" className="home-imageLink">
+          <img src={image} className="home-image" />
         </Link>
       );
     });
+  }
+
+  function renderContent() {
+    if (!images.length) {
+      return (
+        <div className="home-no-data">
+          <h3>Não há nenhum cadastro ainda!</h3>
+          <h4>
+            Utilize o botão de para começar a utilizar a sua galeria de fotos
+            pessoal
+          </h4>
+          <img src={arrowBottom} className="home-arrow-bottom" />
+        </div>
+      );
+    }
+    return <div className="home-container">{renderImages()}</div>;
   }
 
   return (
     <div>
       <Header />
       <RegisterButton />
-      <div className="container">{renderImages()}</div>
+      {renderContent()}
     </div>
   );
 }
