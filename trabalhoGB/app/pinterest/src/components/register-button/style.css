@@ -1,0 +1,28 @@
+.registerButton {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: rgb(243, 243, 243);
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.registerButton:hover {
+  background-color: rgb(233, 233, 233);
+}
+
+.registerIcon {
+  font-size: 27px;
+  color: #e60023;
+  font-style: normal;
+  margin-bottom: 5px;
+}

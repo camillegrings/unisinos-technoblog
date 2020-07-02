@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./style.css";
 
-import { Header } from "../../components";
+import { Header, RegisterButton } from "../../components";
 
 const images = [
   "https://images.pexels.com/photos/4328298/pexels-photo-4328298.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
@@ -18,14 +18,6 @@ const images = [
 ];
 
 function Home() {
-  function renderRegisterButton() {
-    return (
-      <Link to="/cadastro" className="registerButton">
-        <i className="registerIcon">+</i>
-      </Link>
-    );
-  }
-
   function renderImages() {
     return images.map((image) => {
       return (
@@ -39,7 +31,7 @@ function Home() {
   return (
     <div>
       <Header />
-      {renderRegisterButton()}
+      <RegisterButton />
       <div className="container">{renderImages()}</div>
     </div>
   );
