@@ -29,7 +29,7 @@ function Home() {
   function renderImages() {
     return images.map((image) => {
       return (
-        <Link to="/detail" className="imageLink">
+        <Link to="/detalhe" className="imageLink">
           <img src={image} className="image" />
         </Link>
       );
@@ -38,9 +38,7 @@ function Home() {
 
   return (
     <div>
-      <header className="App-header">
-        <Header />
-      </header>
+      <Header />
       {renderRegisterButton()}
       <div className="container">{renderImages()}</div>
     </div>
