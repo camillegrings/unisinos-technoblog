@@ -1,3 +1,10 @@
+# Alunos
+
+- Camille Grings Silva
+- Luis Pozenato
+- Julio Junior
+- Joao Siebelo
+
 # Como iniciar o projeto
 
 - Obs: Para funcionar a comunicação entre o site e a api, é necessário instalar a extensão CORS, no Chrome. Link: https://chrome.google.com/webstore/detail/cors-unblock/lfhmikememgdcahcdlaciloancbhjino/related?hl=pt-BR
