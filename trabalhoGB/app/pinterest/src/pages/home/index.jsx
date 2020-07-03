@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 import arrowBottom from "../../assets/bottom.png";
 
@@ -7,31 +8,32 @@ import "./style.css";
 
 import { Header, RegisterButton } from "../../components";
 
-const images = [
-  "https://images.pexels.com/photos/4328298/pexels-photo-4328298.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-  "https://images.pexels.com/photos/4450090/pexels-photo-4450090.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-  "https://images.pexels.com/photos/4593876/pexels-photo-4593876.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-  "https://images.pexels.com/photos/4562685/pexels-photo-4562685.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-  "https://images.pexels.com/photos/4327786/pexels-photo-4327786.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-  "https://images.pexels.com/photos/4328298/pexels-photo-4328298.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-  "https://images.pexels.com/photos/4328298/pexels-photo-4328298.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-  "https://images.pexels.com/photos/4328298/pexels-photo-4328298.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-  "https://images.pexels.com/photos/4328298/pexels-photo-4328298.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-];
-
 function Home() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    async function getData() {
+      const { data } = await axios.get(
+        "http://localhost:3001/postagem/autor/5effa04950e505e6b09d24f3"
+      );
+      setData(data);
+    }
+
+    getData();
+  }, []);
+
   function renderImages() {
-    return images.map((image) => {
+    return data.map(({ imagemPath, _id }) => {
       return (
-        <Link to="/detalhe" className="home-imageLink">
-          <img src={image} className="home-image" />
+        <Link to={`/detalhe/${_id}`} className="home-imageLink" key={_id}>
+          <img src={imagemPath} className="home-image" />
         </Link>
       );
     });
   }
 
   function renderContent() {
-    if (!images.length) {
+    if (!data.length) {
       return (
         <div className="home-no-data">
           <h3>Não há nenhum cadastro ainda!</h3>

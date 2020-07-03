@@ -8,15 +8,14 @@ import { Header, RegisterButton } from "../../components";
 
 import "./styles.css";
 
-function Detail() {
+function Detail({ match }) {
+  const { id } = match.params;
   const [data, setData] = useState({});
+
   useEffect(() => {
     async function getData() {
-      const { data } = await axios.get(
-        "http://localhost:3001/postagem/5eff9f9e50e505e6b09d24f2"
-      );
+      const { data } = await axios.get(`http://localhost:3001/postagem/${id}`);
       setData(data.postagem);
-      console.log(data);
     }
 
     getData();
@@ -40,7 +39,6 @@ function Detail() {
           <div className="detail-info">
             <h3 className="detail-name">{data.titulo}</h3>
             <p className="detail-description">{data.descricao}</p>
-            <p>Autor: {data.autor}</p>
           </div>
         </div>
       );
