@@ -3,70 +3,39 @@
   padding-top: 50px;
 }
 
-<<<<<<< HEAD
-#elementos{
-    
- background-color: rgba(68, 68, 68, 0.459);
- padding-right: 100px;
- padding-bottom: 300px;
- padding-top: 500px;
- border-radius: 15px;
- margin-left: 500px;
- margin-right: 250px;
- margin-top: -300px;
-}
-
-#uploadDiv {
- float: left;
- background-color: rgb(255, 255, 255);
-border-style: dashed;
- padding-left: 50px;
- padding-right:50px;
- padding-top:  300px;
- padding-bottom: 200px; 
- border-radius: 10px;
- margin-left: 50px;
- margin-top: -300px;
- }
-
-#descricaoDiv{
-float: right;  
-margin-top: 100px;
-margin-left:200px;
-outline: 0;
-
-}
-
-#nomeDiv{
-float: right;
-margin-right: 500px;
-padding-left: 500px;
-
- }
-=======
-#elements {
-  background-color: rgb(68, 68, 68);
+#elementos {
+  background-color: rgba(68, 68, 68, 0.459);
   padding-right: 100px;
+  padding-bottom: 300px;
+  padding-top: 500px;
   border-radius: 15px;
+  margin-left: 500px;
+  margin-right: 250px;
+  margin-top: -300px;
 }
 
 #uploadDiv {
   float: left;
+  background-color: rgb(255, 255, 255);
+  border-style: dashed;
   padding-left: 50px;
   padding-right: 50px;
-  padding-top: 200px;
+  padding-top: 300px;
   padding-bottom: 200px;
-  border-style: dashed;
   border-radius: 10px;
-
-  margin-left: 200px;
+  margin-left: 50px;
+  margin-top: -300px;
 }
 
-/* #descricaoDiv {
+#descricaoDiv {
   float: right;
+  margin-top: 100px;
+  margin-left: 200px;
+  outline: 0;
 }
 
 #nomeDiv {
   float: right;
-} */
->>>>>>> 0f62986d29fcfb4c8f0a5edae7a6ccb351ac184c
+  margin-right: 500px;
+  padding-left: 500px;
+}
