@@ -19,7 +19,7 @@ export const deletePostagem = async (request, response) => {
   try {
     const { params: { id } } = request;
 
-    await PostagensModel.deleteOne({ _id: id });
+    await PostagensModel.findByIdAndDelete(id);
 
     return response
       .status(200)

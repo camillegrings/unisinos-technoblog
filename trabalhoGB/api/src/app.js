@@ -5,6 +5,8 @@ import ComentariosRouter from './routes/comentarios.js';
 import PostagensRouter from './routes/postagens.js';
 import UsuariosRouter from './routes/usuarios.js';
 
+import { login, logout } from './controllers/UsuariosController.js';
+
 const app = express();
 
 const mongoConnection = () => {
@@ -23,3 +25,6 @@ app.use(bodyParser.json());
 app.use('/comentarios', ComentariosRouter);
 app.use('/postagem', PostagensRouter);
 app.use('/usuarios', UsuariosRouter);
+
+app.post('/login', login);
+app.post('/logout', logout);
