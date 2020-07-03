@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -18,10 +20,14 @@ function Register() {
       return (     
 
       <div class="container" id="body">
-
-        <input id="upload" type="file" accept="image/bmp,image/gif,image/jpeg,image/png,image/tiff,image/webp" ></input>
-          <textarea placeholder="Adicione um titulo" name="Nome" id="Nome" cols="30" rows="10"></textarea>
-          <textarea placeholder="Conte sobre o que é seu PIN" name="Descricao" id="Descricao" cols="30" rows="10"></textarea>
+        
+        <div class="elements">
+      
+       <div id="uploadDiv"><input id="upload" type="file" accept="image/bmp,image/gif,image/jpeg,image/png,image/tiff,image/webp" ></input></div>
+        <div id="nomeDiv"><input type="text" placeholder="Adicione um titulo" name="Nome" id="Nome"/></div>
+         <div id="descricaoDiv"><input type="text" placeholder="Conte sobre o que é seu PIN" name="Descricao" id="Descricao"/></div>
+        
+        </div>
           
         </div>
       );
@@ -29,7 +35,7 @@ function Register() {
   }
 
   function renderContent() { 
-    return <div className="home-container">{renderForm()}</div>;
+    return <div className="register-container">{renderForm()}</div>;
   }
 
   return (
