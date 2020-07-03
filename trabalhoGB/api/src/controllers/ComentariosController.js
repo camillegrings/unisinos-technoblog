@@ -18,7 +18,7 @@ export const deleteComentario = async (request, response) => {
   try {
     const { params: { id } } = request;
 
-    await ComentariosModel.deleteOne({ _id: id });
+    await ComentariosModel.findByIdAndDelete(id);
 
     return response
       .status(200)

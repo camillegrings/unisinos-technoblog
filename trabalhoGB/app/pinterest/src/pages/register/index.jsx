@@ -1,21 +1,12 @@
-
-
 import React from "react";
-import { Link } from "react-router-dom";
-
-import arrowBottom from "../../assets/bottom.png";
 
 import "./style.css";
 
-import { Header, RegisterButton } from "../../components";
-
-const images = [
-  "https://images.pexels.com/photos/4328298/pexels-photo-4328298.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-]
- 
+import { Header } from "../../components";
 
 function Register() {
   function renderForm() {
+<<<<<<< HEAD
     return images.map((image) => {
       return (     
 
@@ -28,21 +19,49 @@ function Register() {
          <div id="descricaoDiv"><input type="text" placeholder="Conte sobre o que é seu PIN" name="Descricao" id="Descricao"/></div>
 
           </form>
+=======
+    return (
+      <div class="container" id="body">
+        <div id="uploadDiv">
+          <input
+            type="text"
+            placeholder="Adicione a url da imagem"
+            name="imagem"
+            id="imagem"
+          />
         </div>
-          
-      );
-    });
-  }
+        <div id="nomeDiv">
+          <input
+            type="text"
+            placeholder="Adicione um titulo"
+            name="Nome"
+            id="Nome"
+          />
+>>>>>>> 0f62986d29fcfb4c8f0a5edae7a6ccb351ac184c
+        </div>
 
-  function renderContent() { 
-    return <div className="register-container">{renderForm()}</div>;
+        <div id="descricaoDiv">
+          <input
+            type="text"
+            placeholder="Conte sobre o que é sua postagem"
+            name="Descricao"
+            id="Descricao"
+          />
+        </div>
+        <div>
+          <input type="text" placeholder="Autor" name="Autor" id="Autor" />
+        </div>
+        <div>
+          <input type="submit" />
+        </div>
+      </div>
+    );
   }
 
   return (
     <div>
       <Header />
-      <RegisterButton />
-      {renderContent()}
+      <div className="register-container">{renderForm()}</div>;
     </div>
   );
 }

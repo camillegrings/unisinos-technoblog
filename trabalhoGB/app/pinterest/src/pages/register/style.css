@@ -1,9 +1,9 @@
-#body{
-    background-color: rgb(255, 255, 255);
-    padding-TOP: 500px;
-    padding-bottom: 500px;
+#body {
+  background-color: rgb(255, 255, 255);
+  padding-top: 50px;
 }
 
+<<<<<<< HEAD
 #elementos{
     
  background-color: rgba(68, 68, 68, 0.459);
@@ -43,3 +43,30 @@ margin-right: 500px;
 padding-left: 500px;
 
  }
+=======
+#elements {
+  background-color: rgb(68, 68, 68);
+  padding-right: 100px;
+  border-radius: 15px;
+}
+
+#uploadDiv {
+  float: left;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  border-style: dashed;
+  border-radius: 10px;
+
+  margin-left: 200px;
+}
+
+/* #descricaoDiv {
+  float: right;
+}
+
+#nomeDiv {
+  float: right;
+} */
+>>>>>>> 0f62986d29fcfb4c8f0a5edae7a6ccb351ac184c

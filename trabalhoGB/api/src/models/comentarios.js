@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 const Comentarios = new mongoose.Schema({
-  postagemId: { required: true, type: Number },
+  postagemId: { required: true, type: String },
   data: { default: Date.now, type: Date },
   texto: { required: true, type: String },
   moderado: { default: false, type: Boolean },
