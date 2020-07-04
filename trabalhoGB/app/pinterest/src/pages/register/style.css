@@ -1,41 +1,69 @@
-#body {
-  background-color: rgb(255, 255, 255);
-  padding-top: 50px;
+.register-container {
+  background-color: rgb(236, 236, 236);
+  width: 100%;
+  height: 100vh;
 }
 
-#elementos {
-  background-color: rgba(68, 68, 68, 0.459);
-  padding-right: 100px;
-  padding-bottom: 300px;
-  padding-top: 500px;
-  border-radius: 15px;
-  margin-left: 500px;
-  margin-right: 250px;
-  margin-top: -300px;
+.register-form-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
 }
 
-#uploadDiv {
-  float: left;
-  background-color: rgb(255, 255, 255);
-  border-style: dashed;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 300px;
-  padding-bottom: 200px;
+.register-form-content {
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+  background-color: white;
   border-radius: 10px;
-  margin-left: 50px;
-  margin-top: -300px;
 }
 
-#descricaoDiv {
-  float: right;
-  margin-top: 100px;
-  margin-left: 200px;
-  outline: 0;
+.register-uploadDiv {
+  width: 300px;
+  height: 450px;
+  border-color: gray;
+  border-style: dashed;
+  border-radius: 10px;
+  background-color: rgb(236, 236, 236);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#nomeDiv {
-  float: right;
-  margin-right: 500px;
-  padding-left: 500px;
+.register-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#nomeDiv input,
+#descricaoDiv input,
+.register-uploadDiv input {
+  border: 0;
+  border-bottom: 1px solid black;
+  height: 30px;
+  font-size: 18px;
+  margin-bottom: 40px;
+  width: 300px;
+  margin-left: 20px;
+}
+
+.register-uploadDiv input {
+  width: 205px;
+  margin: 0;
+}
+
+#submit-button {
+  border: 0;
+  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
 }

@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
 
-import arrowBack from "../../assets/return.png";
-
-import { Header, RegisterButton } from "../../components";
+import { Header, RegisterButton, GoBackButton } from "../../components";
 
 import "./styles.css";
 
@@ -20,16 +17,6 @@ function Detail({ match }) {
 
     getData();
   }, []);
-
-  function renderArrowBack() {
-    return (
-      <Link to="/" className="detail-back-link">
-        <div>
-          <img src={arrowBack} className="detail-arrow" />
-        </div>
-      </Link>
-    );
-  }
 
   function renderContent() {
     if (data._id) {
@@ -50,7 +37,7 @@ function Detail({ match }) {
       <Header />
       <RegisterButton />
       <div className="detail-container">
-        {renderArrowBack()}
+        <GoBackButton />
         {renderContent()}
       </div>
     </div>
